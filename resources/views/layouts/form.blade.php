@@ -5,7 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Intranet Prevencion</title>
+    <title>
+        {{config('app.name')}} | @yield('title')        
+</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}}">
@@ -35,5 +37,24 @@
     <script src="{{asset('js/misc.js')}}"></script>
     <!-- endinject -->
 </body>
+
+<footer class="py-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-xl-between">
+            <div class="col-x1-6">
+                <div class="copyright textenter text-xl-left text-muted">
+                © 2023 <a href="/" class="font-weight-bold ml-1">{{ config('app.name') }}</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+
+</footer>
 
 </html>

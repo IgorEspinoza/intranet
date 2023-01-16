@@ -1,5 +1,7 @@
 @extends('layouts.form')
 
+@section('title','Inicio Sesion')
+
 @section('content')
 
 <div class="container-scroller">
