@@ -2,7 +2,7 @@
 
 @section('title','Inicio Sesion')
 
-@section('content')
+@section('content') <!-- se hereda a @extends('layouts.form') -->
 
 <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -16,7 +16,7 @@
                         
                         @if($errors->any())
                         <div class="text-center text-muted mb-4">
-                            <h4>Se econtro el siguiente error</h4>
+                            <h4>Se encontro el siguiente error</h4>
                         </div>
                         <div class="alert alert-danger" role="alert">
                             {{ $errors->first() }}

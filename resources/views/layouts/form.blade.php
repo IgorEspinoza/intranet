@@ -9,6 +9,7 @@
         {{config('app.name')}} | @yield('title')        
 </title>
     <!-- plugins:css -->
+    <link rel="stylesheet" href="path-to/node_modules/mdi/css/materialdesignicons.min.css"/>
     <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-    @yield('content')    
+    @yield('content')    <!-- yield llama al content de login -->
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="{{asset('vendors/js/vendor.bundle.base.js')}}"></script>
