@@ -9,10 +9,12 @@
         {{config('app.name')}} | @yield('title')        
 </title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="path-to/node_modules/mdi/css/materialdesignicons.min.css"/>
+    <<!-- link rel="stylesheet" href="path-to/node_modules/mdi/css/materialdesignicons.min.css"/>
     <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}}">
-    <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
+    <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}"> -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->

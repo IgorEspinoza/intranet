@@ -1,11 +1,13 @@
 @extends('layouts.panel')
 
+@section('title', 'Home')
+
 @section('content')
 
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('images/logo.svg')}}" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/logo-mini.svg')}}" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('images/logo-mini.png')}}" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/logo-mini.png')}}" alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -44,48 +46,10 @@
                         <img src="{{asset('images/faces/face28.png')}}" alt="image">
                     </div>
                     <div class="nav-profile-text">
-                        <p class="mb-1 text-black">Henry Klein</p>
+                        <p class="mb-1 text-black">{{auth()->user()->name}}</p>
                     </div>
                 </a>
-                <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
-                    <div class="p-3 text-center bg-primary">
-                        <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{asset('images/faces/face28.png')}}" alt="">
-                    </div>
-                    <div class="p-2">
-                        <h5 class="dropdown-header text-uppercase pl-2 text-dark">User Options</h5>
-                        <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
-                            <span>Inbox</span>
-                            <span class="p-0">
-                                <span class="badge badge-primary">3</span>
-                                <i class="mdi mdi-email-open-outline ml-1"></i>
-                            </span>
-                        </a>
-                        <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
-                            <span>Profile</span>
-                            <span class="p-0">
-                                <span class="badge badge-success">1</span>
-                                <i class="mdi mdi-account-outline ml-1"></i>
-                            </span>
-                        </a>
-                        <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                            <span>Settings</span>
-                            <i class="mdi mdi-settings"></i>
-                        </a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <h5 class="dropdown-header text-uppercase  pl-2 text-dark mt-2">Actions</h5>
-                        <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
-                            <span>Lock Account</span>
-                            <i class="mdi mdi-lock ml-1"></i>
-                        </a>
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefaul(); document.getElementById('formLogout').submit();">
-
-                            <i class="fas fa-sign-in-alt"></i> Cerrar Sesión
-                        </a>
-                        <form id="formLogout" action="{{ route('logout') }}" method="POST" style="display: none;" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
-                </div>
+                @include('includes.panel.opcionesUser')
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -380,14 +344,7 @@
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->
-    <footer class="footer">
-        <div class="footer-inner-wraper">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
-            </div>
-        </div>
-    </footer>
+    
     <!-- partial -->
 </div>
 <!-- main-panel ends -->

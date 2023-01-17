@@ -2,24 +2,24 @@
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-            <li class="nav-item nav-category">Main</li>
+            <li class="nav-item nav-category">Menu</li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
+                <a class="nav-link" href="#">
+                    <span class="icon-bg"><i class="fas fa-chart-bar menu-icon"></i></span>
                     <span class="menu-title">Dashboard</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="{{asset('pages/icons/mdi.html')}}">
-                    <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
+                    <span class="icon-bg"><i class="far fa-file-alt menu-icon"></i></span>
                     <span class="menu-title">Lista</span>
                 </a>
             </li>
             
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                    <span class="icon-bg"><i class="mdi mdi-crosshairs-gps menu-icon"></i></span>
+                    <span class="icon-bg"><i class="far fa-file-alt menu-icon"></i></span>
                     <span class="menu-title">Formularios</span>
                     <i class="menu-arrow"></i>
                 </a>
@@ -58,7 +58,7 @@
                                     <img src="{{asset('images/faces/face28.png')}}" alt="image">
                                 </div>
                                 <div class="sidebar-profile-text">
-                                    <p class="mb-1">Henry Klein</p>
+                                    <p class="mb-1">{{auth()->user()->name}}</p>
                                 </div>
                             </div>
                         </div>

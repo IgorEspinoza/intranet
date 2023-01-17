@@ -5,15 +5,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@section('title','Inicio')</title>
+    <title>{{config('app.name')}} | @yield('title')</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/flag-icon-css/css/flag-icon.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css')}}">
+    <!-- <link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{ asset('vendors/flag-icon-css/css/flag-icon.min.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css')}}"> -->
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.min.css')}}" />
-    <link rel="stylesheet" href="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.min.css')}}" /> -->
+    <!-- <link rel="stylesheet" href="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}"> -->
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
@@ -46,5 +48,14 @@
     <script src="{{asset('js/dashboard.js')}}"></script>
     <!-- End custom js for this page -->
 </body>
+
+<footer class="footer">
+    <div class="footer-inner-wraper">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © {{config('app.name')}}</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="#" target="_blank"></a>¿ayuda?</span>
+        </div>
+    </div>
+</footer>
 
 </html>
