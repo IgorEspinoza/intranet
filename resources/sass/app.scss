@@ -1,5 +1,13 @@
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+// Fontawesome-free@5.12.1
+$fa-font-path: "../webfonts";
+
+/* @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss'; */
 
 // Variables
 @import 'variables';

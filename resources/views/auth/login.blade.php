@@ -5,15 +5,18 @@
 @section('content') <!-- se hereda a @extends('layouts.form') -->
 
 <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="container-fluid page-body-wrapper full-page-wrapper ">
+
         <div class="content-wrapper d-flex align-items-center auth">
-            <div class="row flex-grow">
+            
+            <div id="promo" class="row flex-grow">
+
                 <div class="col-lg-4 mx-auto">
                     <div class="auth-form-light text-left p-5">
-                        <div class="brand-logo">
-                            <img src="{{asset('images/logo.svg')}}">
+                        <div class="brand-logo  d-flex justify-content-center">
+                            <img src="{{asset('images/logo.png')}}">
                         </div>
-                        
+
                         @if($errors->any())
                         <div class="text-center text-muted mb-4">
                             <h4>Se encontro el siguiente error</h4>
@@ -50,7 +53,9 @@
             </div>
         </div>
     </div>
-</div>
 
 
-@endsection
+
+
+
+    @endsection

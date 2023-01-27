@@ -1,12 +1,3 @@
-@extends('cdpersonalmantenimiento')
-@extends('cdadministrativos')
-@extends('cdaseadores')
-@extends('cdcajeras')
-@extends('cdconductoresauxiliares')
-@extends('cdgerenciajefaturas')
-
-
-@section('content')
 
 <!--nombre y apellidos prevencionista-->
 <div class="row justify-content-center g-5 p-1 border-2">
@@ -47,5 +38,3 @@
         <input type="text" class="form-control" placeholder="Cargo del capacitado" aria-label="Cargo capacitado">
     </div>
 </div>
-
-@endsection 

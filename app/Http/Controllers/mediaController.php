@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
-class HomeController extends Controller
+class mediaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('includes.panel.dashboard');
+        echo ('cdadministrativos');
+        echo ('cdcajeras');
+        echo ('cdaseadores');
+        echo ('cdconductoresauxiliares');
+        echo ('cdgerenciajefaturas');
+        echo ('cdpersonalmantenimiento');
+        return view('includes.panel.cargaDatos');
     }
 }

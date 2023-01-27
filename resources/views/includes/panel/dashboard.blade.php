@@ -1,165 +1,57 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <ul class="nav">
-        <li class="nav-item nav-category">Main</li>
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">
-                <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
-                <span class="menu-title">Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="icon-bg"><i class="mdi mdi-crosshairs-gps menu-icon"></i></span>
-                <span class="menu-title">UI Elements</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/ui-features/buttons.html')}}">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/ui-features/dropdowns.html')}}">Dropdowns</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/ui-features/typography.html')}}">Typography</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{asset('pages/icons/mdi.html')}}">
-                <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
-                <span class="menu-title">Icons</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{asset('pages/forms/basic_elements.html')}}">
-                <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
-                <span class="menu-title">Forms</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{asset('pages/charts/chartjs.html')}}">
-                <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
-                <span class="menu-title">Charts</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{asset('pages/tables/basic-table.html')}}">
-                <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
-                <span class="menu-title">Tables</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="icon-bg"><i class="mdi mdi-lock menu-icon"></i></span>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/samples/blank-page.html')}}"> Blank Page </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/samples/login.html')}}"> Login </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/samples/register.html')}}"> Register </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/samples/error-404.html')}}"> 404 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('pages/samples/error-500.html')}}"> 500 </a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item documentation-link">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/connect-plus-free/jquery/documentation/documentation.html" target="_blank">
-                <span class="icon-bg">
-                    <i class="mdi mdi-file-document-box menu-icon"></i>
-                </span>
-                <span class="menu-title">Documentation</span>
-            </a>
-        </li>
-        <li class="nav-item sidebar-user-actions">
-            <div class="user-details">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <div class="d-flex align-items-center">
-                            <div class="sidebar-profile-img">
-                                <img src="{{asset('images/faces/face28.png')}}" alt="image">
-                            </div>
-                            <div class="sidebar-profile-text">
-                                <p class="mb-1">Henry Klein</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="badge badge-danger">3</div>
-                </div>
-            </div>
-        </li>
-        <li class="nav-item sidebar-user-actions">
-            <div class="sidebar-user-menu">
-                <a href="#" class="nav-link"><i class="mdi mdi-settings menu-icon"></i>
-                    <span class="menu-title">Settings</span>
-                </a>
-            </div>
-        </li>
-        <li class="nav-item sidebar-user-actions">
-            <div class="sidebar-user-menu">
-                <a href="#" class="nav-link"><i class="mdi mdi-speedometer menu-icon"></i>
-                    <span class="menu-title">Take Tour</span></a>
-            </div>
-        </li>
-        <li class="nav-item sidebar-user-actions">
-            <div class="sidebar-user-menu">
-                <a class="nav-link" href="{{ route('logout') }}"><i class="mdi mdi-logout menu-icon"></i>
-                    <span class="menu-title">Log Out</span></a>
-            </div>
-        </li>
-    </ul>
-</nav>
+@extends('home')
+
+@section('content2')
 <div class="main-panel">
     <div class="content-wrapper">
-        <div class="row" id="proBanner">
-            <div class="col-12">
-                <span class="d-flex align-items-center purchase-popup">
-                    <p>Like what you see? Check out our premium version for more.</p>
-                    <a href="https://github.com/BootstrapDash/ConnectPlusAdmin-Free-Bootstrap-Admin-Template" target="_blank" class="btn ml-auto download-button">Download Free Version</a>
-                    <a href="http://www.bootstrapdash.com/demo/connect-plus/jquery/template/" target="_blank" class="btn purchase-button">Upgrade To Pro</a>
-                    <i class="mdi mdi-close" id="bannerClose"></i>
-                </span>
-            </div>
-        </div>
+
         <div class="d-xl-flex justify-content-between align-items-start">
             <h2 class="text-dark font-weight-bold mb-2"> Overview dashboard </h2>
             <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
-                <div class="btn-group bg-white p-3" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-link text-light py-0 border-right">7 Days</button>
-                    <button type="button" class="btn btn-link text-dark py-0 border-right">1 Month</button>
-                    <button type="button" class="btn btn-link text-light py-0">3 Month</button>
-                </div>
+
                 <div class="dropdown ml-0 ml-md-4 mt-2 mt-lg-0">
-                    <button class="btn bg-white dropdown-toggle p-3 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-calendar mr-1"></i>24 Mar 2019 - 24 Mar 2019 </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+                    <button class="btn bg-white p-3 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        <i class="fas fa-calendar-day mr-1" ></i>{{ date('d/m/Y') }}</button>
+                    <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
                         <h6 class="dropdown-header">Settings</h6>
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border {">
+                <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border">
                     <ul class="nav nav-tabs tab-transparent" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#" role="tab" aria-selected="true">Users</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#" role="tab" aria-selected="true">General</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business-1" role="tab" aria-selected="false">Business</a>
+                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#" role="tab" aria-selected="true">Mantenimiento</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="performance-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Performance</a>
+                            <a class="nav-link" id="business-tab" data-toggle="tab" href="#business-1" role="tab" aria-selected="false">Cajeras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Conversion</a>
+                            <a class="nav-link" id="performance-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Aseadores</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Gerencia y Jefaturas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Contores y Auxiliares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Administrativos</a>
+                        </li>
+                        
                     </ul>
                     <div class="d-md-block d-none">
-                        <a href="#" class="text-light p-1"><i class="mdi mdi-view-dashboard"></i></a>
-                        <a href="#" class="text-light p-1"><i class="mdi mdi-dots-vertical"></i></a>
+                        <a href="#" class="text-light p-1"><i class="fa fa-view-dashboard"></i></a>
+                        <a href="#" class="text-light p-1"><i class="fa fa-dots-vertical"></i></a>
                     </div>
                 </div>
                 <div class="tab-content tab-transparent-content">
@@ -210,7 +102,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-12 grid-margin">
                                 <div class="card">
                                     <div class="card-body">
@@ -271,8 +163,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
+                        </div> -->
+                        <!-- <div class="row">
                             <div class="col-sm-4 grid-margin stretch-card">
                                 <div class="card card-danger-gradient">
                                     <div class="card-body mb-4">
@@ -308,9 +200,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+
+    <!-- partial -->
+</div>
+
+@endsection

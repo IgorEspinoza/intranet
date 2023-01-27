@@ -28,12 +28,21 @@
             <span>Blockear Cuenta</span>
             <i class="mdi mdi-lock ml-1"></i>
         </a>
-        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefaul(); document.getElementById('formLogout').submit();">
+        @guest
+        @if (Route::has('login'))
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+        @endif
+        @else
+        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+                        document.getElementById('formLogout').submit();">
 
             <i class="fas fa-sign-in-alt"></i> Cerrar Sesión
         </a>
-        <form id="formLogout" action="{{ route('logout') }}" method="POST" style="display: none;" class="d-none">
+        <form id="formLogout" action="{{ route('logout') }}" method="POST" style="display: none" class="d-done">
             @csrf
         </form>
+        @endguest
     </div>
 </div>
